@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block body %}
+
+   {% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/menu1.css' %}">
+<style>
+    .card-img-container {
+      height: 200px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .card-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+}
+</style>
+
+<section class="about-area pt-60">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12 mb-60">
+                  <div class="section-title text-center">
+                     <p>Famous for good food</p>
+                     <h4>our menu</h4>
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+  <div class="row">
+    {% for i in m %}
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-img-container">
+          <img class="card-img" src="{{ i.photo.url }}" alt="">
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">{{ i.name }}</h4>
+          <h6>{{ i.category }}</h6>
+          <p class="card-text">Content: {{ i.content }}</p>
+          <p class="card-text">Price: {{ i.price }}</p>
+        </div>
+      </div>
+    </div>
+    {% if forloop.counter|divisibleby:3 %}
+  </div>
+  <div class="row">
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+
+            </div>
+            <div class="row pb-60">
+               <div class="col-xl-12 text-center">
+                  <div class="box_btn">
+                     <a href="#">load more</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+</section>
+
+
+
+{% endblock body %}

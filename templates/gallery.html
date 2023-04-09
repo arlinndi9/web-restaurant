@@ -1,0 +1,97 @@
+{% extends 'base.html' %} {% block body %} {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}" />
+
+
+
+<!-- Carousel -->
+<section>
+</section>
+
+<!-- Gallery -->
+<section>
+	<div class="container">
+		<div role="tabpanel">
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation"><a href="#all" class="nav-link" aria-controls="all" role="tab" data-toggle="tab">All Photos</a></li>
+				<li role="presentation"><a href="#one" aria-controls="one" class="nav-link" role="tab" data-toggle="tab">Category One</a></li>
+				<li role="presentation"><a href="#two" aria-controls="two" class="nav-link" role="tab" data-toggle="tab">Category Two</a></li>
+			</ul>
+			<br>
+
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="all">
+					<div class="row">
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant" class="img-thumbnail"></a>
+							<div class="title">Sample Image One</div>
+						</div>
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant food" class="img-thumbnail"></a>
+							<div class="title">Sample Image Two</div>
+						</div>
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant couple" class="img-thumbnail"></a>
+							<div class="title">Sample Image Three</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant chair" class="img-thumbnail"></a>
+							<div class="title">Sample Image Four</div>
+						</div>
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant date" class="img-thumbnail"></a>
+							<div class="title">Sample Image Five</div>
+						</div>
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant birthday" class="img-thumbnail"></a>
+							<div class="title">Sample Image Six</div>
+						</div>
+					</div>
+				</div> <!-- end of tab panel 1 -->
+
+				<div role="tabpanel" class="tab-pane" id="one">
+					<div class="row">
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant seafood" class="img-thumbnail"></a>
+							<div class="title">Sample Image One</div>
+						</div>
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant chicken" class="img-thumbnail"></a>
+							<div class="title">Sample Image Two</div>
+						</div>
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant chef" class="img-thumbnail"></a>
+							<div class="title">Sample Image Three</div>
+						</div>
+					</div>
+				</div><!-- end of tab panel 2-->
+
+				<div role="tabpanel" class="tab-pane" id="two">
+					<div class="row">
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant chair" class="img-thumbnail"></a>
+							<div class="title">Sample Image Four</div>
+						</div>
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant table" class="img-thumbnail"></a>
+							<div class="title">Sample Image Five</div>
+						</div>
+						<div class="col-md-4">
+							<a href="#"><img src="https://source.unsplash.com/random/300x300/?restaurant celebrations" class="img-thumbnail"></a>
+							<div class="title">Sample Image Six</div>
+						</div>
+					</div>
+				</div><!-- end of tab panel 3 -->
+			</div><!-- end of tabpanel -->
+		</div> <!-- end of container -->
+    </div>
+</section>
+
+
+
+
+
+{% endblock body %}
